@@ -15,6 +15,8 @@
 <body>
     <!--main section-->
     <div class="menu-button">
+        <meta name="1h6m24s" content="jquery neni moje silna stranka">
+        <i class="fast fa-bars"></i>
         <meta name="35m24s" content="začal jsem pracovat na bočním menu(moje chyba, měřil jsem to) a přidal rozklikavací funkci search btn, jinak to bylo docela rychle">
         <i class="fas fa-bars"></i>
     </div>
@@ -31,7 +33,6 @@
 
         </div>
     </div>
-
     <!--social sites icons-->
     <div class="socialIcons">
         <meta name="24m11s" content="měl jsem problem s přiloženýma ikonama, nemohl jsem je upravovat podle představ, musel jsem to předelat ">
@@ -43,18 +44,104 @@
 
     </div>
    
-
-
-        <div class="side-bar">
-
-            <!--close button-->
-            <div class="close-button">
-                <i class="fas fa-times"></i> 
+    <div class="container">
+        <div class="row">
+            <div class="banner1">
+                <img src="article1.jpg" alt="" />
+                <h2 class="heading">TRAVEL</h2>
+                <p>Etiam quis quam. Nemo enim ipsam voluptatem quia</p>
             </div>
-            <!--image logo-->
-            <img src="ZDF_logo!_Logo_2021.svg" alt="">
 
+            <div class="banner2">
+            <img src="space-station-moon-alt-duotone" alt="" />
+
+            <p>Discover content from different universe</p>
+            </div>
+
+            <div class="banner3">
+            <img src="article2.jpg" alt="" />
+            <h2 class="heading">TRAVEL</h2>
+            <p>Etiam quis quam. Nemo enim ipsam voluptatem quia</p>
+            </div>
+
+            <div class="banner4">
+            <img src="article3.jpg" alt="" /></a>
+            <h2 class="heading">TECH</h2>
+            <p>Etiam quis quam. Nemo enim ipsam voluptatem quia</p>
+            </div>
+            
+            <div class="banner5">
+            <img src="article4.jpg" alt="" /></a>
+            <h2 class="heading">TRAVEL</h2>
+            <p>Etiam quis quam. Nemo enim ipsam voluptatem quia</p>
         </div>
+    </div>
+
+    <div class="side-bar">
+            <header>
+            <!--close button-->
+                <div class="close-button">
+                    <i class="fas fa-times"></i> 
+                </div>
+            <!--image logo-->
+                <img src="loogo.svg" alt="">
+                <!--logo-->
+                <h1>Logo here</h1>
+             </header>
+
+             <!--menu-->
+             <div class="menu">
+                <div class="item"><a href=""><i class="fas fa-desktop"></i>Dashboard</a></div>
+                <div class="item"><a class="sub-button"><i class="fas fa-table"></i>Tables
+                <!--dropdown-->
+                <!--dropdown arrow-->
+                <i class="fas fa-angle-right dropdown"></i>
+                </a>
+                <div class="sub-menu">
+                    <a href="" class="sub-item">work</a>
+                    <a href="" class="sub-item">in</a>
+                    <a href="" class="sub-item">progress</a>
+                </div>
+                </div>
+
+                <div class="item"><a href=""><i class="fas fa-th"></i>Forms</a></div>
+                <div class="item"><a href=""><i class="fas fa-cog"></i>Settings</a></div>
+                <div class="item"><a href=""><i class="fas fa-info-circle"></i>About</a></div>
+             </div>
+     </div> 
+    <footer>
+        <meta name="5m58s" content="dělal jsem si čaj a zapoměl vypnout časovač">
+        <div class="footerText">All rights reserved. &copy;2048 </div>
+        <div class="footerImg"><img src="logo.svg" alt=""></div>
+    </footer>  
+
+
+
+    <!--Jquery link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            //jquery expand collapse
+            $('.menu-button').click(function(){
+                $('.side-bar').addClass('active');
+                $('.menu-button').css("visibility", "hidden");
+            });
+            //close button
+            $('.close-button').click(function(){
+                $('.side-bar').removeClass('active');
+                $('.menu-button').css("visibility", "visible");
+            });
+            //toggle sub menu
+            $('.sub-button').click(function(){
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find("dropdown").toggleClass('rotate');
+            });
+         })
+
+    </script>
+
+    <script src="scripts.js"></script>
 
 </body>
 </html>
